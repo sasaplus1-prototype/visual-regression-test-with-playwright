@@ -25,7 +25,6 @@ jobs:
     needs: take-snapshot
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: actions/download-artifact@95815c38cf2ff2164869cbab79da8d1f422bc89e # v4.2.1
         with:
           name: __snapshots__
@@ -43,3 +42,8 @@ jobs:
             --body "This PR updates snapshots"
             --base main
             --head chore/update-snapshots
+        env:
+          GH_HOST: github.com
+          GH_PROMPT_DISABLED: 1
+          GH_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
