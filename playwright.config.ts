@@ -76,4 +76,11 @@ export default defineConfig({
     url: "http://127.0.0.1:3000",
     reuseExistingServer: !process.env.CI,
   },
+
+  // https://playwright.dev/docs/api/class-testconfig#test-config-snapshot-path-template
+  snapshotPathTemplate: "./__screenshots__/{testFilePath}/{arg}{ext}",
+  // expect: {
+  //   toMatchSnapshot: {
+  //   }
+  // }
 });
