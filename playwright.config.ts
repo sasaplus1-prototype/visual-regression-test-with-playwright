@@ -78,7 +78,7 @@ export default defineConfig({
   },
 
   // https://playwright.dev/docs/api/class-testconfig#test-config-snapshot-path-template
-  snapshotPathTemplate: "./__screenshots__/{testFilePath}/{arg}{ext}",
+  snapshotPathTemplate: "./__snapshots__/{testFilePath}/{arg}{ext}",
   // expect: {
   //   toMatchSnapshot: {
   //   }
