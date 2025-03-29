@@ -39,10 +39,11 @@ jobs:
           git push origin +chore/update-snapshots
       - run: >
           gh pr create
-            --title "chore: update snapshots"
-            --body "This PR updates snapshots"
-            --base main
-            --head chore/update-snapshots
+          --title 'chore: update snapshots'
+          --body 'This PR updates snapshots'
+          --fill
+          --base main
+          --head chore/update-snapshots
         env:
           GH_HOST: github.com
           GH_PROMPT_DISABLED: 1
