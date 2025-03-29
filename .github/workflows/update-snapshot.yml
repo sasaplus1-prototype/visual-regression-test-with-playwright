@@ -1,10 +1,10 @@
-name: test
+name: update snapshot
 
 on:
   - workflow_dispatch
 
 jobs:
-  test:
+  update-snapshot:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:v1.51.1-noble
     steps:
