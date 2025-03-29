@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@playwright/test": "1.51.1",
+    "@types/node": "22.13.14",
+    "http-server": "14.1.1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "http-server --port 3000",
+    "test": "playwright test --project=chromium",
+    "test:update-snapshots": "playwright test --project=chromium --update-snapshots"
+  }
+}
