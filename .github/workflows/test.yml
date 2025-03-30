@@ -16,6 +16,7 @@ jobs:
           node-version: lts/*
       - run: npm ci
       - run: cat index.html
+      - run: rm -rf node_modules/.cache/ms-playwright
       - run: npm test
       # upload everytime
       # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#always
