@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "http-server --port 3000",
+    "start": "http-server --port 3000 -c-1",
     "test": "playwright test --project=chromium",
     "test:update-snapshots": "playwright test --project=chromium --update-snapshots"
   }
