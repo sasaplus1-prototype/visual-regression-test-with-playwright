@@ -3,6 +3,9 @@ import { test, expect } from "@playwright/test";
 test.describe("Visual Regression Test Example", () => {
   test.beforeEach(async function ({ page }) {
     await page.goto("http://127.0.0.1:3000/index.html");
+    await page.evaluateHandle(async () => {
+      await document.fonts.ready;
+    });
   });
 
   test("should capture and compare a screenshot of the homepage", async ({
