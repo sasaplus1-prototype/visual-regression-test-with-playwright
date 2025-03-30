@@ -5,6 +5,7 @@ on:
 
 jobs:
   take-snapshot:
+    name: take snapshot
     runs-on: ubuntu-latest
     # https://mcr.microsoft.com/en-us/artifact/mar/playwright/about
     container: mcr.microsoft.com/playwright@sha256:146d046a8d79a1b3a87596c4457b0b1c47f811bf4fc2cc1b99e873ae7f1cbbbd # v1.51.1-noble
@@ -24,6 +25,7 @@ jobs:
           include-hidden-files: true
           overwrite: true
   update-snapshot:
+    name: update snapshot
     needs: take-snapshot
     runs-on: ubuntu-latest
     steps:
